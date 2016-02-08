@@ -1,0 +1,62 @@
+---
+title: "pricegal"
+author: "Leandro Jimenez"
+date: "Sunday2016"
+output: ioslides_presentation
+runtime: shiny
+---
+
+
+
+Course Project: Shiny Application and Reproducible Pitch
+========================================================
+author: leandro
+date: 2016
+
+
+
+
+Overview
+========================================================
+
+This was built as part of a deliverable for the course **Developing Data Products** as part of the Coursera Data Science Specialization.
+
+
+Source code for ui.R and server.R files are available on the GitHub repo: https://github.com/jleandroj/pricegal 
+
+take at look in the aplications https://jleandroj.shinyapps.io/pricegal/
+
+
+
+
+read
+========================================================
+
+Money that you need to spend for your trip
+
+providing details: like distance, price (gasoline) and gas.After choosing cyl(Cylinders), Disp(Displacement) and hp(Horse Power).
+
+getting a table with results.
+
+
+
+
+
+MTCARS Dataset
+========================================================
+
+The data used was mtcars dataset. this a head of 5 first results: 
+
+```{r, echo=FALSE,warning=FALSE}
+head(mtcars,n=5)
+```
+
+
+Plot
+========================================================
+
+cyl and displacement or mpg 
+```{r, echo=FALSE,warning=FALSE}
+library(car)
+scatterplot.matrix(~disp+cyl+mpg, data=mtcars)
+```
